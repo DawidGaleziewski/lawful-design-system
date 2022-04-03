@@ -1,8 +1,21 @@
-import Button from './Button';
+import { Meta, Story, Preview, Canvas } from "@storybook/addon-docs/blocks";
+import { Button } from "./Button";
 
-export default {
-  title: "Atoms/Button",
-  component: Button,
-};
+<Meta title="Buttons" component={Button} />
 
-export const BasicButton = () => <Button />
+# Buttons
+
+Buttons for project
+
+## Usage
+
+Buttons are used to trigger internal actions within your web application
+
+<Preview withToolbar>
+  <Story name="primary">
+    <Button variant="primary">Send form</Button>
+  </Story>
+  <Story name="secondary">
+    <Button variant="secondary">Send form</Button>
+  </Story>
+</Preview>

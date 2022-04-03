@@ -11,6 +11,11 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@emotion/react": "^11.8.2",
+    "@emotion/styled": "^11.8.1",
+    "@storybook/addon-backgrounds": "^6.4.20",
+    "@storybook/addon-contexts": "^5.3.21",
+    "@storybook/addon-docs": "^6.4.20",
     "next": "12.1.4",
     "react": "18.0.0",
     "react-dom": "18.0.0"
