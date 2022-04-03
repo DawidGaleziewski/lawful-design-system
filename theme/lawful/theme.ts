@@ -1,3 +1,4 @@
+import { type } from "os";
 import { orange, blue, green, red, neutral, gradient } from "./colors";
 import { typeScale, fontfamily, fontWeight } from "./typography";
 
@@ -55,4 +56,4 @@ export const lawfulTheme = {
   },
 };
 
-export const ITheme = typeof lawfulTheme;
+export type ILawfulTheme = typeof lawfulTheme;

@@ -12,8 +12,5 @@ interface IButtonProps {
 }
 
 export const Button = styled.button<IButtonProps>`
-    background-color: ${props => {
-        console.log('props on styled', props)
-         return props.theme.color.primary
-    }}
+    background-color: ${props => props.theme.color.primary}
 `;
