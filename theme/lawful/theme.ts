@@ -17,6 +17,8 @@ export const lawfulTheme = {
       success: green[500],
       danger: red[500],
       alert: orange[600],
+      active: blue[400],
+      disabled: neutral[700],
     },
   },
   radius: {

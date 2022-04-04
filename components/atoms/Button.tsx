@@ -26,9 +26,22 @@ export const Button = styled.button<IButtonProps>`
         color: ${props.theme.color.textInverted};
         opacity: 1;
         transition: 0.3s linear opacity;
+        outline: 0;
 
-        &:hover {
+        &:focus {
+            outline: 1px solid ${props.theme.color.status.active};
+            outline-offset: 2px;
+        }
+
+        &:hover, &:active {
             opacity: 0.8;
+            outline: none;
+        }
+
+        &:disabled {
+            background-color: ${props.theme.color.status.disabled};
+            cursor: not-allowed;
+            opacity: 1;
         }
     `}
 `;
