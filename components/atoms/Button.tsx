@@ -3,8 +3,8 @@ import {css} from '@emotion/react';
 import styled from '@emotion/styled';
 
 enum ButtonVariants {
-    PRIMARY,
-    GHOST
+    PRIMARY = "primary",
+    GHOST = "secondary"
 }
 
 interface IButtonProps {
@@ -12,5 +12,25 @@ interface IButtonProps {
 }
 
 export const Button = styled.button<IButtonProps>`
-    background-color: ${props => props.theme.color.primary}
+    cursor: pointer;
+    border-radius: 3.7rem;
+    padding: 1.6rem 3.7rem;
+    border: none;
+    font-size: ${props => props.theme.typography.buttonDefault.size};
+    font-weight: ${props => props.theme.typography.buttonDefault.weight};
+    font-family: ${props => props.theme.typography.buttonDefault.family};
+
+
+    ${props => props.variant === ButtonVariants.PRIMARY && css`
+        background-color: ${props.theme.color.primary};
+        color: ${props.theme.color.textInverted};
+        opacity: 1;
+        transition: 0.3s linear opacity;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    `}
 `;
+
+

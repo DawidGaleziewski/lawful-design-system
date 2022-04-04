@@ -10,7 +10,7 @@ export const typeScale = {
   subHeader1: "2.4rem",
   subHeader2: "2rem",
   h5: "1.6rem",
-  button: "2.8rem",
+  button: "1.4rem",
   mobileMenu: "3rem",
   paragraph: "1.4rem",
   list: "2rem",
