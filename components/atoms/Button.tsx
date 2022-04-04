@@ -28,7 +28,7 @@ export const Button = styled.button<IButtonProps>`
         transition: 0.3s linear opacity;
         outline: 0;
 
-        &:focus {
+        &:focus-visible {
             outline: 1px solid ${props.theme.color.status.active};
             outline-offset: 2px;
         }
