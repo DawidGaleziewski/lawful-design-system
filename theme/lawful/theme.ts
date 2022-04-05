@@ -13,6 +13,7 @@ export const lawfulTheme = {
     backgroundLight: neutral[100],
     text: blue[700],
     textInverted: neutral[100],
+    transparent: "rgba(255,255,255, 0)",
     status: {
       success: green[500],
       danger: red[500],
@@ -22,8 +23,8 @@ export const lawfulTheme = {
     },
   },
   radius: {
-    100: "5px",
-    700: "37px",
+    100: "0.5rem",
+    700: "3.7rem",
   },
   typography: {
     mainHeader: {

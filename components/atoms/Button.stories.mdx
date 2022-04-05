@@ -1,4 +1,5 @@
 import { Meta, Story, Preview, Canvas } from "@storybook/addon-docs/blocks";
+import { Background } from "../../utils/Background";
 import { Button } from "./Button";
 
 <Meta title="Buttons" component={Button} />
@@ -12,14 +13,18 @@ Buttons for project
 Buttons are used to trigger internal actions within your web application
 
 <Preview withToolbar>
-  <Story name="all">
-    <Button variant="primary">Send form</Button>
-    <Button variant="secondary">Send form</Button>
-  </Story>
   <Story name="primary">
     <Button variant="primary">Send form</Button>
   </Story>
   <Story name="secondary">
-    <Button variant="secondary">Send form</Button>
+    <Background variant="dark">
+      <Button variant="secondary">Send form</Button>
+    </Background>
+  </Story>
+  <Story name="form primary">
+    <Button variant="form-primary">Send form</Button>
+  </Story>
+  <Story name="form secondary">
+    <Button variant="form-secondary">Send form</Button>
   </Story>
 </Preview>
