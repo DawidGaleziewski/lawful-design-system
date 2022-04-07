@@ -2,14 +2,14 @@ import React from 'react';
 import {css} from '@emotion/react';
 import styled from '@emotion/styled';
 
-enum ButtonVariants {
+export enum ButtonVariants {
     PRIMARY = "primary",
     SECONDARY = "secondary",
     FORM_PRIMARY ="form-primary",
     FORM_SECONDARY = "form-secondary"
 }
 
-interface IButtonProps {
+export interface IButtonProps {
     variant: ButtonVariants
 }
 
