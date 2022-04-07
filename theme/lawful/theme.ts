@@ -55,6 +55,7 @@ export const lawfulTheme = {
     paragraph: {
       size: typeScale.paragraph,
       family: fontfamily.tertiary,
+      weight: fontWeight.normal,
     },
   },
 };
