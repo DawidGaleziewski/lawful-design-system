@@ -47,6 +47,11 @@ export const lawfulTheme = {
       family: fontfamily.secondary,
       weight: fontWeight.medium,
     },
+    h5: {
+      size: typeScale.h5,
+      family: fontfamily.primary,
+      weight: fontWeight.bold,
+    },
     buttonDefault: {
       size: typeScale.button,
       family: fontfamily.tertiary,
