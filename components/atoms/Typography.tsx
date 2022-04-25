@@ -2,17 +2,19 @@ import React from 'react';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 
-export enum TypographyVariant {
-    MAIN_HEADER = "main-header",
-    SECTION_HEADER = "section-header",
-    SUB_HEADER = "sub-header",
-    CARD_HEADER ="card-header",
-    BUTTON_TEXT = 'button-text',
-    MOBILE_MENU = "mobile-menu",
-    PARAGRAPH = "paragraph",
-    LIST = "list",
-    LINK = "link"
-}
+export const TypographyVariant = {
+    MAIN_HEADER: "main-header",
+    SECTION_HEADER: "section-header",
+    SUB_HEADER: "sub-header",
+    CARD_HEADER:"card-header",
+    BUTTON_TEXT: 'button-text',
+    MOBILE_MENU: "mobile-menu",
+    PARAGRAPH: "paragraph",
+    LIST: "list",
+    LINK: "link"
+} as const;
+
+type TypographyVariantUnionType = typeof TypographyVariant[keyof typeof TypographyVariant]
 
 const VariantDefaultHTMLTag = {
     [TypographyVariant.MAIN_HEADER]: 'h1',
@@ -27,8 +29,9 @@ const VariantDefaultHTMLTag = {
 }
 
 export interface ITypography {
-    variant?: TypographyVariant;
+    variant?: TypographyVariantUnionType;
     as?: React.ElementType<any>;
+    children?: React.ReactElement
 }
 
 export const Typography: React.VFC<ITypography> = (props = { variant: TypographyVariant.PARAGRAPH}) => <TypographyBase variant={props.variant} as={props.as ?? VariantDefaultHTMLTag[props.variant ?? TypographyVariant.PARAGRAPH] }>
