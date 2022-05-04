@@ -2,6 +2,18 @@ import { type } from "os";
 import { orange, blue, green, red, neutral, gradient } from "./colors";
 import { typeScale, fontfamily, fontWeight } from "./typography";
 
+const fontHeight = {
+    1100: "6.5rem",
+    1000: "5rem",
+    900: "4.5rem",
+    800: "3.2rem",
+    700: "3rem",
+    600: "2.8rem",
+    500: '2.4rem',
+    400: '2rem',
+}
+
+
 export const lawfulTheme = {
   color: {
     primary: orange[500],
@@ -31,36 +43,43 @@ export const lawfulTheme = {
       size: typeScale.mainHeader,
       family: fontfamily.primary,
       weight: fontWeight.black,
+      height : fontHeight[1100]
     },
     sectionHeader: {
       size: typeScale.sectionHeader,
       family: fontfamily.primary,
       weight: fontWeight.bold,
+      height : fontHeight[1000]
     },
     subHeader1: {
       size: typeScale.subHeader1,
       family: fontfamily.primary,
       weight: fontWeight.bold,
+      height : fontHeight[800]
     },
     subHeader2: {
       size: typeScale.subHeader2,
       family: fontfamily.secondary,
       weight: fontWeight.medium,
+      height : fontHeight[700]
     },
     h5: {
       size: typeScale.h5,
       family: fontfamily.primary,
       weight: fontWeight.bold,
+       height : fontHeight[500]
     },
     buttonDefault: {
       size: typeScale.button,
       family: fontfamily.tertiary,
       weight: fontWeight.bold,
+      height : fontHeight[600]
     },
     paragraph: {
       size: typeScale.paragraph,
       family: fontfamily.tertiary,
       weight: fontWeight.normal,
+       height : fontHeight[400]
     },
   },
 };

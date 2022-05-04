@@ -45,35 +45,41 @@ const TypographyBase = styled.p<ITypography>`
         font-size: ${props.theme.typography.mainHeader.size};
         font-weight: ${props.theme.typography.mainHeader.weight};
         font-family: ${props.theme.typography.mainHeader.family};
+        line-height: ${props.theme.typography.mainHeader.height};
     `};
 
     ${props => props.variant === TypographyVariant.SECTION_HEADER && css`
-        font-size: ${props.theme.typography.mainHeader.size};
-        font-weight: ${props.theme.typography.mainHeader.weight};
-        font-family: ${props.theme.typography.mainHeader.family};
+        font-size: ${props.theme.typography.sectionHeader.size};
+        font-weight: ${props.theme.typography.sectionHeader.weight};
+        font-family: ${props.theme.typography.sectionHeader.family};
+        line-height: ${props.theme.typography.sectionHeader.height};
     `};
 
     ${props => props.variant === TypographyVariant.SUB_HEADER && css`
         font-size: ${props.theme.typography.subHeader1.size};
         font-weight: ${props.theme.typography.subHeader1.weight};
         font-family: ${props.theme.typography.subHeader1.family};
+        line-height: ${props.theme.typography.subHeader1.height};
     `};
 
     ${props => props.variant === TypographyVariant.CARD_HEADER && css`
         font-size: ${props.theme.typography.h5.size};
         font-weight: ${props.theme.typography.h5.weight};
         font-family: ${props.theme.typography.h5.family};
+        line-height: ${props.theme.typography.h5.height};
     `};
 
     ${props => props.variant === TypographyVariant.BUTTON_TEXT && css`
         font-size: ${props.theme.typography.buttonDefault.size};
         font-weight: ${props.theme.typography.buttonDefault.weight};
         font-family: ${props.theme.typography.buttonDefault.family};
+        line-height: ${props.theme.typography.buttonDefault.height};
     `};
 
     ${props => props.variant === TypographyVariant.PARAGRAPH && css`
         font-size: ${props.theme.typography.paragraph.size};
         font-weight: ${props.theme.typography.paragraph.weight};
         font-family: ${props.theme.typography.paragraph.family};
+        line-height: ${props.theme.typography.paragraph.height};
     `}
 `;
