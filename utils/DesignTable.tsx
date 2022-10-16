@@ -15,6 +15,7 @@ export const DesignTable = (props:{children: any}) => {
 const DesignTableBase = styled.div`
    background-color: ${props => props.theme.color.backgroundLight};
    width: 100%;
+   border: 1px solid ${props => props.theme.color.primary};
 `;
 
 const DesignTableRow = styled.div<{}>`
