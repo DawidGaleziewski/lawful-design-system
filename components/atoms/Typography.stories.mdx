@@ -1,6 +1,7 @@
 import { Meta, Story, Preview, Canvas } from "@storybook/addon-docs/blocks";
 import { Background } from "../../utils/Background";
 import { Typography, TypographyVariant } from "./Typography";
+import { DesignTable } from "../../utils/DesignTable";
 
 <Meta title="Typography" component={Typography} />
 
@@ -14,17 +15,54 @@ Children will have a tag and text style specific for a typography
 
 <Preview withToolbar>
   <Story name="All">
-    <Typography variant={TypographyVariant.MAIN_HEADER}>Main-header</Typography>
-    <Typography variant={TypographyVariant.SECTION_HEADER}>
-      Section-header
-    </Typography>
-    <Typography variant={TypographyVariant.SUB_HEADER}>Sub-header</Typography>
-    <Typography variant={TypographyVariant.BUTTON_TEXT}>Button text</Typography>
-    <br />
-    <Typography variant={TypographyVariant.MOBILE_MENU}>Mobile menu</Typography>
-    <br />
-    <Typography variant={TypographyVariant.LIST}>List</Typography>
-    <Typography variant={TypographyVariant.LINK}>Link</Typography>
-    <Typography variant={TypographyVariant.PARAGRAPH}>Paragraph</Typography>
+    <DesignTable>
+      <DesignTable.Row>
+        <DesignTable.Cell>
+          <Typography variant={TypographyVariant.MAIN_HEADER}>
+            Main-header
+          </Typography>
+        </DesignTable.Cell>
+        <DesignTable.Cell>
+          <Typography variant={TypographyVariant.MAIN_HEADER}>
+            Lock and load
+          </Typography>
+        </DesignTable.Cell>
+        <DesignTable.Cell>
+          <Typography variant={TypographyVariant.MAIN_HEADER}>
+            Lock and load
+          </Typography>
+        </DesignTable.Cell>
+      </DesignTable.Row>
+      <DesignTable.Row>
+        <DesignTable.Cell>
+          <Typography variant={TypographyVariant.SECTION_HEADER}>
+            Section-header
+          </Typography>
+        </DesignTable.Cell>
+        <DesignTable.Cell>
+          <Typography variant={TypographyVariant.SECTION_HEADER}>
+            Lock and load
+          </Typography>
+        </DesignTable.Cell>
+        <DesignTable.Cell>
+          <Typography variant={TypographyVariant.SECTION_HEADER}>
+            Lock and load
+          </Typography>
+        </DesignTable.Cell>
+      </DesignTable.Row>
+      <Typography variant={TypographyVariant.SECTION_HEADER}>
+        Section-header
+      </Typography>
+      <Typography variant={TypographyVariant.SUB_HEADER}>Sub-header</Typography>
+      <Typography variant={TypographyVariant.BUTTON_TEXT}>
+        Button text
+      </Typography>
+      <Typography variant={TypographyVariant.MOBILE_MENU}>
+        Mobile menu
+      </Typography>
+      <Typography variant={TypographyVariant.LIST}>List</Typography>
+      <Typography variant={TypographyVariant.LINK}>Link</Typography>
+      <Typography variant={TypographyVariant.PARAGRAPH}>Paragraph</Typography>
+    </DesignTable>
   </Story>
 </Preview>

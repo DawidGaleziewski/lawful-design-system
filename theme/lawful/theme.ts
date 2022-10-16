@@ -22,6 +22,9 @@ export const lawfulTheme = {
       disabled: neutral[700],
     },
   },
+  space: {
+    base: 0.8
+  },
   radius: {
     100: "0.5rem",
     700: "3.7rem",
