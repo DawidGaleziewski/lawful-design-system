@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 import { Button, ButtonVariants, IButtonProps } from "./Button";
-import { Typography, TypographyVariant, ITypography } from "./Typography";
+import { Text, TextVariant, IText } from "./Text";
 
 
 enum CardVariants {
@@ -9,7 +9,7 @@ enum CardVariants {
 
 interface ICardProps{
     variant: CardVariants;
-    children: [React.ReactElement<ITypography>, React.ReactElement<IButtonProps>];
+    children: [React.ReactElement<IText>, React.ReactElement<IButtonProps>];
 }
 
 export const Card = (props: ICardProps) => <div>{props.children}</div>
@@ -18,13 +18,13 @@ const CardButton = (props:IButtonProps) => <Button variant={ButtonVariants.SECON
 
 Card.Button = CardButton;
 
-const CardTitle:React.VFC<ITypography> = (props) => <Typography>{props.children}</Typography>;
+const CardTitle:React.VFC<IText> = (props) => <Text>{props.children}</Text>;
 
 Card.Title = CardTitle;
 
 const CardTest = () => {
     return <Card variant={CardVariants.LIGHT}>
-       <Card.Title variant={TypographyVariant.LINK}>Test</Card.Title>
+       <Card.Title variant={TextVariant.LINK}>Test</Card.Title>
        <Card.Button variant={ButtonVariants.PRIMARY}>Test</Card.Button>
     </Card>
 }

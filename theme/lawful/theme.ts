@@ -1,6 +1,6 @@
 import { type } from "os";
 import { orange, blue, green, red, neutral, gradient } from "./colors";
-import { typeScale, fontfamily, fontWeight } from "./typography";
+import { typeScale, fontfamily, fontWeight } from "./text";
 
 export const lawfulTheme = {
   color: {
@@ -29,7 +29,7 @@ export const lawfulTheme = {
     100: "0.5rem",
     700: "3.7rem",
   },
-  typography: {
+  text: {
     mainHeader: {
       size: typeScale.mainHeader,
       family: fontfamily.primary,
