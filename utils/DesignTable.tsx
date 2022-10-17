@@ -30,12 +30,18 @@ const DesignTableRow = styled.div<{}>`
 
 DesignTable.Row = DesignTableRow;
 
-const DesignTableCell = styled.div<{}>`
+const DesignTableCell = styled.div<IBackground>`
   padding: 1.6rem 2.8rem;
   width: 100%;
+
+  ${props => props.variant === "dark" && css`
+        background-color: ${props.theme.color.backgroundDark}; 
+        color: ${props.theme.color.textInverted};
+   `};
+
   &:not(:last-of-type) {
         border-right: 0.5px solid ${props => props.theme.color.backgroundDark};
-    } 
+    }
 `;
 
 DesignTable.Cell = DesignTableCell
